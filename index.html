@@ -4,9 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/main.css" />
     <title>OverBudget</title>
   </head>
   <body>
+    <header>
+      <div class="wrapper">
+        <h1><span>Over</span>Budget <sub>Beta</sub></h1>
+      </div>
+    </header>
+    <main class="wrapper">
+      <form id="movementForm">
+        <fieldset>
+          <label for="movementDescription">Description</label>
+          <input
+            type="text"
+            id="movementDescription"
+            placeholder="Description"
+          />
+        </fieldset>
+        <fieldset>
+          <label for="movementAmount">Amount</label>
+          <input type="number" id="movementAmount" placeholder="Aamount" />
+        </fieldset>
+        <fieldset>
+          <label for="movementType">Type</label>
+          <select id="movementType">
+            <option>Type</option>
+            <option value="income">Income</option>
+            <option value="spent">Spent</option>
+            <option value="initial">Initial</option>
+            <option value="transfer">Transfer</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <label for="movementAccount">Account</label>
+          <select id="movementAccount">
+            <option>Account</option>
+            <option value="mercadoPago">Mercado Pago</option>
+            <option value="banorte">Banorte</option>
+            <option value="dinn">Dinn</option>
+            <option value="klar">Klar</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <label for="movementDate">Date</label>
+          <input type="datetime-local" id="movementDate" />
+        </fieldset>
+        <input type="submit" value="Save" />
+      </form>
+    </main>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
